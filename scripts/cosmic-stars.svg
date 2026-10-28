@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="560" viewBox="0 0 560 560">
+  <g fill="#00e8c6" fill-opacity=".65">
+    <circle cx="38" cy="52" r=".7"/><circle cx="525" cy="265" r=".7"/><circle cx="125" cy="495" r=".7"/>
+  </g>
+  <g fill="#fff" fill-opacity=".6">
+    <circle cx="155" cy="215" r="1"/><circle cx="185" cy="285" r="1"/>
+  </g>
+  <g fill="#c74ded" fill-opacity=".6">
+    <circle cx="275" cy="85" r=".7"/><circle cx="435" cy="205" r=".7"/>
+  </g>
+  <g fill="#ffe66d" fill-opacity=".55">
+    <circle cx="405" cy="335" r=".7"/><circle cx="305" cy="385" r=".7"/>
+  </g>
+  <circle cx="515" cy="165" r="1" fill="#ee5d43" fill-opacity=".6"/>
+  <g fill="#96e072" fill-opacity=".6">
+    <circle cx="92" cy="375" r=".7"/><circle cx="68" cy="175" r="1"/>
+  </g>
+  <g fill="#ff00aa" fill-opacity=".6">
+    <circle cx="225" cy="465" r=".7"/><circle cx="490" cy="85" r="1"/>
+  </g>
+  <circle cx="355" cy="505" r="1" fill="#7cb7ff" fill-opacity=".6"/>
+  <circle cx="475" cy="445" r=".7" fill="#f39c12" fill-opacity=".6"/>
+</svg>

@@ -1,0 +1,142 @@
+/**
+ * Cosmic Andromeda — modo estático por defecto.
+ * Una textura repetible sustituye los gradientes de estrellas. No se fuerza
+ * ninguna capa con will-change ni se anima una superficie del tamaño del editor.
+ * --animated habilita únicamente bordes breves mientras hay interacción.
+ * El consumo real depende del renderer, la pantalla y la carga del IDE.
+ */
+@keyframes andromeda-vertical {
+  from { transform: translateY(-50%); }
+  to { transform: translateY(0); }
+}
+@keyframes andromeda-horizontal {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.monaco-workbench .part.editor .monaco-editor .monaco-editor-background {
+  background-color: #14161d !important;
+}
+
+/* Fondo estático: no crea una capa animada sobre el contenido desplazable. */
+.monaco-workbench .part.editor > .content .editor-group-container
+  > .editor-container > .editor-instance > .monaco-editor > .overflow-guard
+  > .monaco-scrollable-element > .lines-content.monaco-editor-background {
+  background-image: url("./cosmic-stars.svg") !important;
+  background-size: 560px 560px !important;
+  background-repeat: repeat !important;
+}
+
+.monaco-workbench .part.sidebar {
+  position: relative !important;
+  border-right: 1px solid rgba(0, 232, 198, 0.22) !important;
+  overflow: hidden !important;
+}
+.monaco-workbench .part.activitybar {
+  border-right: 1px solid rgba(0, 232, 198, 0.18) !important;
+}
+
+/* El panel acoplado aporta el fondo; xterm deja pasar el fondo sin atenuar texto. */
+.monaco-workbench .part.panel {
+  position: relative !important;
+  border-top: 1px solid rgba(0, 232, 198, 0.25) !important;
+  overflow: hidden !important;
+  background-color: #0b0d13 !important;
+}
+.monaco-workbench .part.panel > .content,
+.monaco-workbench .part.panel .pane-body.integrated-terminal,
+.monaco-workbench .part.panel .terminal-outer-container,
+.monaco-workbench .part.panel .xterm-viewport {
+  background-color: transparent !important;
+}
+
+/* Coordenadas calculadas sobre el editor por cosmic-terminal-overlay.js.
+ * Oscurecer el fondo permite leer el código y mantener el texto de xterm nítido.
+ * No aplicar opacity al panel/canvas ni filtros de desenfoque.
+ */
+.monaco-workbench .part.panel.andromeda-terminal-overlay {
+  position: fixed !important;
+  left: var(--andromeda-terminal-left) !important;
+  top: var(--andromeda-terminal-top) !important;
+  z-index: 100 !important;
+  background-color: rgba(11, 13, 19, 0.55) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+.monaco-workbench .part.panel.andromeda-terminal-overlay > .title {
+  background-color: #14161d !important;
+}
+.monaco-workbench .part.panel .andromeda-overlay-toggle {
+  flex: 0 0 auto;
+  margin: 3px 8px;
+  padding: 2px 6px;
+  border: 1px solid rgba(0, 232, 198, 0.35);
+  border-radius: 3px;
+  background: #14161d;
+  color: var(--vscode-foreground, #d5ced9);
+  cursor: pointer;
+  font: inherit;
+}
+.monaco-workbench .part.panel .andromeda-overlay-toggle:focus-visible {
+  outline: 1px solid #00e8c6;
+}
+.monaco-workbench .editor-group-container > .title .tabs-and-actions-container {
+  border-bottom: 1px solid rgba(0, 232, 198, 0.2) !important;
+}
+.monaco-workbench .part.editor > .content .editor-group-container
+  > .title .tabs-container > .tab.active {
+  position: relative !important;
+  box-shadow: inset 0 -1px 0 rgba(0, 232, 198, 0.65) !important;
+  overflow: hidden !important;
+}
+.monaco-workbench .part.statusbar {
+  border-top: 1px solid rgba(0, 232, 198, 0.15) !important;
+}
+.monaco-workbench .part.editor .monaco-editor .cursors-layer > .cursor {
+  background-color: #00e8c6 !important;
+  border-color: #00e8c6 !important;
+  color: #0e0f14 !important;
+}
+
+/* Sin clase de actividad no existen pseudoelementos ni animaciones decorativas.
+ * Se respeta tanto la preferencia del sistema como la clase de Monaco.
+ * Estas reglas nunca pausan las animaciones propias del IDE.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  html.andromeda-motion-active .monaco-workbench:not(.monaco-reduce-motion):not(.nosidebar) .part.sidebar::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 200%;
+    background: repeating-linear-gradient(180deg, transparent 0%, #00e8c6 25%, transparent 50%);
+    pointer-events: none;
+    z-index: 50;
+    animation: andromeda-vertical 1.8s linear 1;
+  }
+  html.andromeda-motion-active .monaco-workbench:not(.monaco-reduce-motion):not(.nopanel) .part.panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 1px;
+    background: repeating-linear-gradient(90deg, transparent 0%, #00e8c6 25%, transparent 50%);
+    pointer-events: none;
+    z-index: 50;
+    animation: andromeda-horizontal 1.8s linear 1;
+  }
+  html.andromeda-motion-active .monaco-workbench:not(.monaco-reduce-motion)
+    .part.editor > .content .editor-group-container > .title .tabs-container > .tab.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200%;
+    height: 1px;
+    background: repeating-linear-gradient(90deg, transparent 0%, #00e8c6 25%, transparent 50%);
+    pointer-events: none;
+    z-index: 30;
+    animation: andromeda-horizontal 1.8s linear 1;
+  }
+}

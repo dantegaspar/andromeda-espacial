@@ -1,0 +1,10 @@
+.github/**
+.vscode/**
+scripts/**
+tests/**
+docs/**
+node_modules/**
+dist/**
+package-lock.json
+.gitignore
+*.vsix
