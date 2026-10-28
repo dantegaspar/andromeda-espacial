@@ -12,8 +12,15 @@ La imagen muestra el tema base del que parte esta personalización.
 - **Andromeda Espacial Bordered**
 - **Andromeda Espacial Italic**
 - **Andromeda Espacial Italic Bordered**
+- **Andromeda Sith** — rojo carmesí predominante, strings coral y fondo oscuro con matiz rojo.
 
 Incluye colores semánticos, acentos turquesa, violeta, naranja y amarillo, y colores de terminal. El paquete de tienda es declarativo: no ejecuta código ni modifica la aplicación. No incluye binarios nativos y es compatible con Apple Silicon.
+
+### Andromeda Sith
+
+![Vista ilustrativa de Andromeda Sith](images/andromeda-sith.png)
+
+Vista ilustrativa de la paleta Sith. Conserva los colores de diagnóstico, Git y ANSI para mantener su significado.
 
 ## Instalación
 
@@ -21,7 +28,7 @@ Cuando esté publicado en Open VSX, busca **Andromeda Espacial** en Extensiones 
 
 También puedes instalar el archivo `.vsix` desde **Extensions: Install from VSIX…** en la paleta de comandos.
 
-Después abre **Preferences: Color Theme** y elige una de las cuatro variantes.
+Después abre **Preferences: Color Theme** y elige una de las cinco variantes.
 
 ## Desarrollo
 
@@ -33,7 +40,7 @@ npm test
 npm run package
 ```
 
-El paquete se genera en `dist/andromeda-espacial-1.0.0.vsix`. El manifiesto se genera al empaquetar; no se mantiene un `.vsixmanifest` manual.
+El paquete se genera en `dist/andromeda-espacial-1.1.0.vsix`. El manifiesto se genera al empaquetar; no se mantiene un `.vsixmanifest` manual.
 
 ## Publicación
 

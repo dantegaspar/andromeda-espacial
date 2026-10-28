@@ -1,8 +1,8 @@
 {
   "name": "andromeda-espacial",
   "displayName": "Andromeda Espacial",
-  "description": "Tema oscuro personalizado basado en Andromeda, con cuatro variantes para Antigravity IDE y VS Code.",
-  "version": "1.0.0",
+  "description": "Tema oscuro basado en Andromeda, con cinco variantes y una edición Sith roja para Antigravity IDE y VS Code.",
+  "version": "1.1.0",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
     "patch": "node scripts/patch-neon.mjs",
@@ -44,6 +44,11 @@
         "label": "Andromeda Espacial Italic",
         "uiTheme": "vs-dark",
         "path": "./themes/Andromeda-italic-color-theme.json"
+      },
+      {
+        "label": "Andromeda Sith",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Andromeda-sith-color-theme.json"
       }
     ]
   },

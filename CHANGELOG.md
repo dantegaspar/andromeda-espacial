@@ -1,6 +1,11 @@
 # Change Log
 
-## [Unreleased] - 2026-10-28
+## [1.1.0] - 2026-10-28
+
+- Add Andromeda Sith as a fifth theme: crimson UI accents, red variables and keywords, coral strings, and warm dark backgrounds.
+- Preserve semantic highlighting and the meaning of ANSI, Git and diagnostic colors.
+
+## [1.0.0] - 2026-10-28
 
 - Static cosmic effects by default; optional finite border animations on input.
 - Replace star gradients with one SVG tile; remove the animated editor overlay,

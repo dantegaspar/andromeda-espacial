@@ -22,7 +22,7 @@ La instalación de Antigravity IDE revisada usa `https://open-vsx.org/vscode/gal
    npm ci
    npm test
    npm run package
-   npx ovsx@1.3.0 publish dist/andromeda-espacial-1.0.0.vsix
+   npx ovsx@1.3.0 publish dist/andromeda-espacial-1.1.0.vsix
    unset OVSX_PAT
    ```
 
