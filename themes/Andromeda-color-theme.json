@@ -150,7 +150,7 @@
     "titleBar.border": "#00000000",
     "editorGroupHeader.tabsBorder": "#00000000",
     "tab.activeBorderTop": "#00000000",
-    "terminal.background": "#00000000"
+    "terminal.background": "#0E1017D9"
   },
   "tokenColors": [
     {

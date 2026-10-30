@@ -1,57 +1,52 @@
-# Andromeda Espacial
+# Mi Andromeda — Cosmic & Sith Edition
 
-Tema oscuro personalizado basado en [Andromeda de Eliver Lara](https://github.com/EliverLara/Andromeda), preparado para Antigravity IDE y editores compatibles con temas de VS Code.
+![Mi Andromeda — Cosmic & Sith Edition](images/andromeda-cover.png)
 
-![Vista del tema base Andromeda](images/andromeda.png)
+Tema oscuro de espacio profundo inspirado en [Andromeda de Eliver Lara](https://github.com/EliverLara/Andromeda), diseñado y optimizado para **Antigravity IDE** y editores compatibles con **VS Code**.
 
-La imagen muestra el tema base del que parte esta personalización.
+Combina un fondo cósmico profundo (`#14161D`), contraste jerárquico en paneles (`#101217` y `#0E0F14`), resaltado semántico optimizado para **JavaScript / TypeScript** y dos ediciones con efectos luminosos de bajo consumo en GPU.
 
-## Variantes
+---
 
-- **Andromeda Espacial**
-- **Andromeda Espacial Bordered**
-- **Andromeda Espacial Italic**
-- **Andromeda Espacial Italic Bordered**
-- **Andromeda Sith** — rojo carmesí predominante, strings coral y fondo oscuro con matiz rojo.
+## ✨ Variantes incluidas
 
-Incluye colores semánticos, acentos turquesa, violeta, naranja y amarillo, y colores de terminal. El paquete de tienda es declarativo: no ejecuta código ni modifica la aplicación. No incluye binarios nativos y es compatible con Apple Silicon.
+### 1. Mi Andromeda *(Cosmic Cyan — `#00e8c6`)*
+Edición principal con acentos, bordes láser, resplandor de terminal y cursor en verde/cian neón (`#00e8c6`).
 
-### Andromeda Sith
+![Vista de Mi Andromeda](images/andromeda.png)
 
-![Vista ilustrativa de Andromeda Sith](images/andromeda-sith.png)
+---
 
-Vista ilustrativa de la paleta Sith. Conserva los colores de diagnóstico, Git y ANSI para mantener su significado.
+### 2. Mi Andromeda Sith *(Crimson Laser — `#ff1e42`)*
+Conserva intactos el fondo cósmico (`#14161D`) y toda la paleta de sintaxis de **Mi Andromeda**, transformando únicamente los bordes luminosos, el resplandor de la terminal y el cursor láser a rojo Sith (`#ff1e42`).
 
-## Instalación
+![Vista de Mi Andromeda Sith](images/andromeda-sith.png)
 
-Cuando esté publicado en Open VSX, busca **Andromeda Espacial** en Extensiones de Antigravity IDE. El identificador previsto es `miandromeda.andromeda-espacial`.
+---
 
-También puedes instalar el archivo `.vsix` desde **Extensions: Install from VSIX…** en la paleta de comandos.
+## 🚀 Características principales
 
-Después abre **Preferences: Color Theme** y elige una de las cinco variantes.
+- **Fondo de espacio profundo (`#14161D`)**: Contraste limpio entre el editor de código, el explorador de archivos (`#101217`) y las barras exteriores (`#0E0F14`), sin línea activa intrusiva.
+- **Sintaxis optimizada para JS / TS**: Diferenciación clara entre claves de objetos, propiedades, tipos, decoradores, parámetros y valores mediante `semanticHighlighting` y reglas TextMate depuradas.
+- **Efectos Cosmic Andromeda (Opcional en macOS)**:
+  - Partículas finas de polvo estelar con destellos suaves acelerados por hardware (`opacity` con mesetas de reposo).
+  - Bordes con haz láser continuo (`transform: translate3d`) que cambian automáticamente entre verde/cian (`#00e8c6`) y rojo Sith (`#ff1e42`) al alternar de tema.
+  - Terminal integrada con efecto de cristal cósmico translúcido.
+  - Auto-pausa inteligente (`0%` de uso de GPU/CPU cuando la ventana está en segundo plano o los paneles están ocultos).
 
-## Desarrollo
+---
 
-Requiere Node.js 22 o posterior para las herramientas de empaquetado.
+## 📦 Instalación
 
-```sh
-npm ci
-npm test
-npm run package
-```
+1. Busca **Mi Andromeda** en la pestaña de Extensiones de Antigravity IDE (Open VSX), o instala el paquete `.vsix` desde **`Extensions: Install from VSIX...`**.
+2. Abre la paleta de comandos (`Cmd + Shift + P` / `Ctrl + Shift + P`), selecciona **`Preferences: Color Theme`** y elige:
+   - **Mi Andromeda**
+   - **Mi Andromeda Sith**
 
-El paquete se genera en `dist/andromeda-espacial-1.1.0.vsix`. El manifiesto se genera al empaquetar; no se mantiene un `.vsixmanifest` manual.
+---
 
-## Publicación
+## Credits & License
 
-Consulta [los pasos para publicar en Open VSX](docs/PUBLISHING.md), el catálogo configurado en Antigravity IDE.
+Personalización mantenida por **Dante**. Basada en [Andromeda](https://github.com/EliverLara/Andromeda) de Eliver Lara y su [fork para Open VSX](https://github.com/FelixIcaza/Andromeda).
 
-## Extras visuales
-
-Los [extras Cosmic Andromeda](docs/COSMIC.md) son scripts locales opcionales para macOS. Modifican recursos del IDE, requieren permiso de Gestión de aplicaciones y no están incluidos en el `.vsix`. Las estrellas, animaciones y la terminal superpuesta no se instalan con el tema de la tienda.
-
-## Créditos y licencia
-
-Personalización mantenida por Dante. Basada en [Andromeda](https://github.com/EliverLara/Andromeda) y en su [fork para Open VSX](https://github.com/FelixIcaza/Andromeda).
-
-Licencia [MIT](LICENSE.md). Se conserva el aviso de copyright original de Eliver Lara.
+Licencia [MIT](LICENSE.md).
